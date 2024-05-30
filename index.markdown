@@ -15,7 +15,7 @@ The following video is captured on Meta Quest 3, playing a 7680x4096 x 30 FPS H2
 <source src="images/directvideo_comparison.mp4" type="video/mp4">
 </video>
 
-You can also download demo APKs to test on your own devices from https://github.com/joemarshall/directvideo/releases.
+You can also download demo APKs to test on your own devices from [https://github.com/joemarshall/directvideo/releases](https://github.com/joemarshall/directvideo/releases).
 
 For the Meta Quest demo, press A and B to switch between DirectVideo Android and the built in media player. For the phone demo, touch 3 fingers to switch player, 2 fingers to pause and play.
 
