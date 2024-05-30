@@ -43,15 +43,4 @@ Check out the [demo video and apk below.](#Demos)
 ### Why is Android video so bad in Unreal?
 In Unreal, video is played using Android Java. Each frame is then copied to Unreal C++. In Vulkan, each video frame is first copied to a CPU buffer, which is then loaded back into a vulkan GPU texture. Unsurprisingly when you start playing with typical 360 video resolution such as 6016x2560@25fps, this means transferring approx 1.5 gigabytes of data per second across the CPU / GPU boundary. This also removes the ability to make use of hardware support for colour space conversions, which again kills performance.
 
-### Can I see a demo?
-
-The following video is captured on Meta Quest 3, playing a 7680x3840 x 30 FPS H265 MP4 file encoded at a bitrate of 117000 kb/s. When the screen says "vulkan_vide", that is the DirectVideo plugin, when it says 'old_slow', that is the standard Unreal Android Media Player. The FPS displayed is the headset FPS. As you can see, when using the standard media player, the headset drops to an unusable 15 FPS, which on a VR headset is sickness inducing and tears as you move your head. With direct Vulkan video, the headset keeps a steady 72FPS, and head tracking remains smooth and lovely. 
-
-If you have access to a Quest 3 and want to see this in action yourself, download the 
-
-[demo apk (200MB)](https://github.com/joemarshall/megademo/releases/latest/download/quest_demo.zip)
-
-Apologies, it is massive, because it contains a 10 second 360 video clip....
-
-
 
