@@ -8,9 +8,9 @@ layout: page
 DirectVideo Android enables high performance video playback within Unreal Engine on Android devices, including phones and VR Headsets such as Meta Quest 2 & 3. It works through direct use of the Vulkan graphics API, keeping all video handling in GPU, with frames being decompressed directly into Unreal textures. This means you can play 4K and 8K videos, including 360 degree content without frame drops on mid-level phones and VR headsets.
 
 Buy now on Unreal Marketplace:
-https://www.unrealengine.com/marketplace/en-US/product/direct-video-android-beta
+[https://www.unrealengine.com/marketplace/en-US/product/direct-video-android-beta](https://www.unrealengine.com/marketplace/en-US/product/direct-video-android-beta)
 
-For larger developers wanting full source code access etc. contact me direct at unreal@joemarshall.org.uk
+For larger developers wanting full source code access etc. contact me direct at [unreal@joemarshall.org.uk](mailto:unreal@joemarshall.org.uk)
 
 ## Demo
 
