@@ -30,9 +30,52 @@ For the Meta Quest demo, press A and B to switch between DirectVideo Android and
 
 ## How to use
 
-Install and enable the plugin. Enable it for your video sources, either by disabling the built in "Android Media Player" plugin, or manually by selecting "AndroidVulkanVideo" as your player in your video source, as shown in the image below:
+Install and enable the plugin. Enable it for your video sources, either by disabling the built in "Android Media Player" plugin, or manually by selecting "DirectVideo" as your player in your video source, as shown in the image below:
 
-![Select AndroidVulkanVideo in your video source under Player Overrides ](images/select_player.png)
+![Select DirectVideo in your video source under Player Overrides ](images/select_player.png)
+
+
+## Advanced Player Options
+
+### Logging
+
+If something doesn't work, and you want to look at logs (or send me some log output), there are two levels of logs available - Verbose and VeryVerbose. To enable these, add a section to DefaultEngine.ini (or add a value into Core.Log if you already set logging levels for anything else), like below.
+
+```
+[Core.Log]
+LogDirectVideo=VeryVerbose
+```
+
+Then it will print tons of stuff (or a bit of stuff if you set it to **Verbose**) to the Android LogCat. You can read a logcat file from command prompt / terminal like so:
+
+1. Clear the logs, so that you don't log a million lines of data about whatever has happened before: 
+`adb logcat -c `
+
+2. Now start your app. Once it is running, save the logcat output to a file:
+`adb logcat > output.txt`
+3. When your app has finished, output.txt should be full of lovely logs and you can press CTRL+C to stop writing logcat.
+
+### Colour format
+
+By default the player uses 10 bit colour (RGBA1010102) for the output frames, which gives higher quality colour reproduction than 8 bit (RGBA888). It is supported by modern Android GPUs. On some older devices, or if you want to replay video that has alpha you may want to use RGBA888 colour format. You can do this by adding a DirectVideo section to DefaultEngine.ini with the colour format set, like so:
+```
+[DirectVideo]
+OutputFormat=CharRGBA
+```
+It also supports a few other colour formats, although on current devices performance is quite poor for most of them.
+
+Possible values for OutputFormat are:
+
+name | description
+-----|-----
+CharBGR10A2 | 10 bit RGB + 2 bit alpha (recommended)
+CharBGRA | 8 bit RGBA (works, may have better performance, but lower colour quality)
+CharRGBA | 8 bit RGBA (same as CharBGRA)
+RGBA16 | RGBA 16 bit integer (64 bits/pixel - SLOW on any devices I have)
+FloatRGB | RGB float textures (may be too slow on current devices)
+FloatRGBA | RGBA float textures with alpha (slow)
+
+
 
 ## Frequently Answered Questions
 
