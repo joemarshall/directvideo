@@ -23,10 +23,7 @@ The following video is captured on Meta Quest 3, playing a 7680x4096 x 30 FPS H2
 <source src="images/directvideo_comparison.mp4" type="video/mp4">
 </video>
 
-You can also download demo APKs to test on your own devices from [https://github.com/joemarshall/directvideo/releases](https://github.com/joemarshall/directvideo/releases).
-
-For the Meta Quest demo, press A and B to switch between DirectVideo Android and the built in media player. For the phone demo, touch 3 fingers to switch player, 2 fingers to pause and play.
-
+You can also download demo APKs to test on your own devices from [https://github.com/joemarshall/DirectVideoExample/releases/latest](https://github.com/joemarshall/DirectVideoExample/releases/latest).
 
 ## How to use
 
@@ -34,8 +31,26 @@ Install and enable the plugin. Enable it for your video sources, either by disab
 
 ![Select DirectVideo in your video source under Player Overrides ](images/select_player.png)
 
+## DirectVideoMeshRenderer (experimental)
+
+If you want the ultimate in performance, instead of rendering to a material as normal
+set a static mesh to render to a plain material (or whatever you want it to look
+like when you have no video showing), and add the Direct Video Mesh Renderer component
+to the StaticMesh Actor, pointed at your video. This will render the video directly to that mesh
+on the main framebuffer. On my Quest demo app this uses less than 50% of the number of fragment
+shader operations compared to rendering to texture first. This works in stereo multiview environments as well as standard Android, and supports MSAA antialiasing.
+
+There are some limitations however - 
+
+1) Only static meshes are supported.
+2) Videos are rendered after the main base pass, without lighting, and
+   any clever effects like reflections is unlikely to work with them.
 
 ## Advanced Player Options
+
+### Demo APK log dump
+
+If you find the demo apks don't work on your device, follow the instructions at (https://github.com/joemarshall/DirectVideoExample/) to send me a logfile dump and I'll try and fix it.
 
 ### Logging
 
