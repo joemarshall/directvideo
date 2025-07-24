@@ -72,7 +72,7 @@ Then it will print tons of stuff (or a bit of stuff if you set it to **Verbose**
 
 ### Colour format
 
-By default the player uses 10 bit colour (RGBA1010102) for the output frames, which gives higher quality colour reproduction than 8 bit (RGBA888). It is supported by modern Android GPUs. On some older devices, or if you want to replay video that has alpha you may want to use RGBA888 colour format. You can do this by adding a DirectVideo section to DefaultEngine.ini with the colour format set, like so:
+By default the player uses 10 bit colour (RGBA1010102) for the output frames, which gives higher quality colour reproduction than 8 bit (RGBA888). It is supported by modern Android GPUs. On some older devices, you may want to use RGBA888 colour format. You can do this by adding a DirectVideo section to DefaultEngine.ini with the colour format set, like so:
 ```
 [DirectVideo]
 OutputFormat=CharRGBA
@@ -107,4 +107,5 @@ On Android platform video playback in Unreal is **broken** when using Vulkan. Th
 ### Why is Android video so bad in Unreal?
 In Unreal, video is played using Android Java. Each frame is then copied to Unreal C++. In Vulkan, each video frame is first copied to a CPU buffer, which is then loaded back into a vulkan GPU texture. Unsurprisingly when you start playing with typical 360 video resolution such as 6016x2560@25fps, this means transferring approx 1.5 gigabytes of data per second across the CPU / GPU boundary. This also removes the ability to make use of hardware support for colour space conversions, which again kills performance.
 
-
+### Is it possible to load alpha directly from videos?
+Currently in Android alpha channels are not supported in video decoders (https://github.com/androidx/media/issues/1388). If you need video with alpha, you can workaround by either using a chroma key type mask in a shader, or by doing a dodgy hack where you render the video double size and then render the alpha on one side of the video, then recombine the two in your material shader (https://medium.com/go-electra/unlock-transparency-in-videos-on-android-5dc43776cc72).
