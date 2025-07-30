@@ -98,9 +98,23 @@ FloatRGBA | RGBA float textures with alpha (slow)
 Streaming is not yet supported; the current version of the plugin supports playback from assets or local storage only. For remote files, you will need to download to local storage first. 
 
 ### What formats should I use?
-As is the same with the default Unreal media player, this relies on decoding support on the Android device. Typically on pretty much any recent device you are safe using H264 or H265 mp4 files, with one caveat; if you are developing for Meta Quest 3, there is a bug on the device which means it crashes decoding some 4k/8K H264 files; if you are targeting 4K or 8K, I recommend encoding as H265, which has both improved compression performance, and doesn't crash the Quest 3.
+As is the same with the default Unreal media player, this relies on decoding support on the Android device. Typically on pretty much any recent device you are safe using H264 or H265 mp4 files, with one caveat; if you are developing for Meta Quest 3, there is a bug on the device which means it crashes decoding some 4k/8K H264 files; if you are targeting 4K or 8K, I recommend encoding as H265, which has both improved compression performance, and doesn't crash the Quest 3. Or you can use AV1 if you're happy only targeting recent devices like Quest 3 which support it. AV1 is really fast to encode with ffmpeg.
 
-### Why is this plugin neaded?
+### How many videos can I play at once, and can I play loads of massive videos?
+
+If you check out my [multiple players demo](https://github.com/joemarshall/DirectVideoMultiples) for Quest 3, I run 8 players at a 2K resolution (3840x2176x24fps), without frame drops or slowing down the Quest display frame rate. The main things limiting what you can play is limits on hardware decoders on your device. If you try and decode more, it will either fail, or fallback to very slow software video decoding, which both kills frame rate and on my phone at least has very poor colour rendering quality for some reason.
+
+On Quest 3, I have quantified the main limit you hit, which is the total of the 'decoder blocks per frame' over all open players. The Snapdragon XR2 Gen2 chip on the Quest 3 can decode an absolute maximum of 278528 16x16 blocks over all the encoders (I don't know quite why it is that slightly odd number, but trust me, that is what the hardware reports and checks against). To work out how many blocks per frame your video takes:
+
+1) For each video, divide the resolution by 16 on each axis and round up if not divisible by 16
+2) Multiply the divided by 16 resolutions together for each video, this is the number of decoder blocks you are using for that video.
+3) Sum all the decoder block counts up to get your total per frame block size. If this is greater than 278528, you won't be able to run this configuration on Quest.
+
+Looking at the Android specs, I think there is in theory a limit on most devices of 16 videos decoding simulataneously in total, but I haven't tested that.
+
+Bear in mind that the limits are on how many videos you have *open* in a player, no matter whether you are actively rendering it. Because of this, if you're using loads of different players, be careful to make sure you don't have any open when you don't need them to be prepared  or playing.
+
+### Why is this plugin needed?
 
 On Android platform video playback in Unreal is **broken** when using Vulkan. This becomes increasingly obvious when you are building for standalone VR platforms such as Meta Quest 3, and you try to play a 360 degree video, which are typically filmed at 6k or greater resolution. If you try to do this while building in recent Unreal using Vulkan for graphics, you will find frame rate drops massively, if you are on VR, the headset is unusable, and everything heats up. With my plugin, videos play smoothly in Vulkan and the device no longer drops frames. 
 
