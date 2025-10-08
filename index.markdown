@@ -1,9 +1,9 @@
 ---
 title: Direct Plugins
 layout: page
-headerimg: images/directplugins_promo_image.png
+headerimg: images/directplugins_no_border.png
 ---
-At Direct Plugins I build game engine plugins to accelerate Android devices for Unreal and Unity (coming soon...)
+At Direct Plugins I build game engine plugins to accelerate Android devices. I build plugins for Unreal and Unity (coming soon).
 
 # Direct Video Android
 

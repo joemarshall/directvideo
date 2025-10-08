@@ -1,5 +1,5 @@
 ---
-title: Direct Camera Android for Unreal
+title: DirectCamera Android for Unreal
 layout: page
 headerimg: images/dc/wideimage.png
 ---
