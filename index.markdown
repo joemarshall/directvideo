@@ -5,16 +5,25 @@ headerimg: images/directplugins_no_border.png
 ---
 At Direct Plugins I build game engine plugins to accelerate Android devices. I build plugins for Unreal and Unity (coming soon).
 
-# Direct Video Android
+<div class = "imggrid">
 
-[![Direct Video Logo](images/dv/logo-round.png)](directvideo_unreal.html)
+<div class="imggrid-left-image">
+<a href="directvideo_unreal.html">
+<img src="images/dv/logo-round.png"/>
+</a>
+</div>
 
+<div class ="imggrid-right-cell">
 Direct Video provides high quality GPU accelerated video playback for Android devices. It allows you to playback high resolution 4k, 8k videos which aren't playable in Unreal Engine. For example for use of 360 content on Meta Quest headsets. If you're having problems with video playback being slow on Unreal, you need this plugin.
+</div>
 
-# Direct Camera Android
 
-[![Direct Camera Logo](images/dc/logo-round.png)](directcamera_unreal.html)
-
+<div class="imggrid-left-image">
+<a href="directcamera_unreal.html">
+<img src="images/dc/logo-round.png"/>
+</a>
+</div>
+<div class ="imggrid-right-cell">
 Direct Camera gives full camera control and GPU accelerated capture into Unreal Engine on Android devices. It goes beyond the default camera plugin in the following ways:
 
 * Multiple camera support (e.g. for both Meta Quest 3 front cameras, or capture front and back cameras at once on phones.)
@@ -24,3 +33,4 @@ Direct Camera gives full camera control and GPU accelerated capture into Unreal 
 * Capture JPEG images from the camera.
 * Capture RAW images in DNG format.
 * Capture images to CPU as raw YUV buffers.
+</div>
