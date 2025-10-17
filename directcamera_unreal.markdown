@@ -6,7 +6,7 @@ headerimg: images/dc/wideimage.png
 
 ## What is it?
 
-DirectCamera Android enables high performance camera catprue and playback within Unreal Engine on Android devices, including phones and VR Headsets such as Meta Quest 2 & 3. It uses the Vulkan graphics API to keep all video handling in GPU, with frames being decompressed directly into Unreal textures, which means you can use full camera quality in-game. It also enables you to select and capture multiple camera devices e.g. front and back cameras, left and right eye cameras on Quest 3, and to easily configure camera settings such as shutter speed, resolution, white balance & focus through blueprint.
+DirectCamera Android enables high performance camera capture and playback within Unreal Engine on Android devices, including phones and VR Headsets such as Meta Quest 2 & 3. It uses the Vulkan graphics API to keep all video handling in GPU, with frames being decompressed directly into Unreal textures, which means you can use full camera quality in-game. It also enables you to select and capture multiple camera devices e.g. front and back cameras, left and right eye cameras on Quest 3, and to easily configure camera settings such as shutter speed, resolution, white balance & focus through blueprint.
 
 ## Demo and test APKs
 
