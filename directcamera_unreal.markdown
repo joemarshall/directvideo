@@ -8,9 +8,6 @@ headerimg: images/dc/wideimage.png
 
 DirectCamera Android enables high performance camera catprue and playback within Unreal Engine on Android devices, including phones and VR Headsets such as Meta Quest 2 & 3. It uses the Vulkan graphics API to keep all video handling in GPU, with frames being decompressed directly into Unreal textures, which means you can use full camera quality in-game. It also enables you to select and capture multiple camera devices e.g. front and back cameras, left and right eye cameras on Quest 3, and to easily configure camera settings such as shutter speed, resolution, white balance & focus through blueprint.
 
-Coming soon on Fab store.
-
-
 ## Demo and test APKs
 
 Sample project and test APKs (you need the plugin to build from source obviously):
@@ -19,6 +16,8 @@ Sample project and test APKs (you need the plugin to build from source obviously
 For larger developers wanting full source code access etc. contact me direct at [unreal@joemarshall.org.uk](mailto:unreal@joemarshall.org.uk)
 
 ## How to use
+
+For full documentation see [the doxygen docs](doxygen\dc_unreal). The below is the TLDR version...
 
 ### Open a Camera
 
@@ -125,3 +124,4 @@ Unreal has limited support for camera input, and uses an old API. This means:
 1) It is hard or impossible to use multiple cameras at once.
 2) Unreal uses software buffer formats for video, which is less efficient.
 3) Unreal doesn't support control of camera parameters or manual modes.
+4) Unreal doesn't support jpeg or raw DNG encoding / saving.
