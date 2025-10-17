@@ -93,35 +93,38 @@ $(function(){initNavTree('index.html','',''); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md0"></a>
+Getting the plugin</h2>
+<p>For more about Direct Camera, look at the <a href="../../directcamera_unreal.html">promo page</a></p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1"></a>
 In project settings, check which permissions you want</h2>
 <p>For camera access to work, you need to have the correct permissions set in your app manifest. Direct Camera can do this for you - in <span class="tt">Project settings, Plugins, Direct Camera</span>, you can choose what permissions you want. There are two options, one for standard cameras, and another for Meta Quest passthrough cameras, which require a different permission.</p>
 <div class="image">
 <img src="open_directcamera.png" alt=""/>
 <div class="caption">
 Project settings for requesting camera permissions</div></div>
-    <h2 class="doxsection"><a class="anchor" id="autotoc_md1"></a>
+    <h2 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
 At startup, request permissions</h2>
 <p>Before you can access a camera, you need to request permissions from Android to do so. This may pop up a box for the user if they haven't already allowed it, so make sure you have done this before you try opening a camera.</p>
 <p>You can do this using the <span class="tt">Request Direct Camera Runtime Permissions</span> blueprint object (which calls <a class="el" href="class_u_direct_camera_permission_getter.html#ac12ec68d47f09cf199e3dc5b4f36408b">UDirectCameraPermissionGetter::RequestDirectCameraRuntimePermissions</a> ). This object has two output pins, which are fired asynchronously on permissions granted or refused. Wait for these to fire before you open the camera. This uses the project settings above to choose what permissions to request, so make sure you set them up correctly.</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
 Showing a stream from a camera on a texture</h2>
 <p>To do this, you first need to create an Unreal <span class="tt">Media Player</span> object and assign it to a <span class="tt">Media Texture</span> as usual (and put that texture on a material or whatever you want to do with it). Then, once you have requested permissions successfully, you can open the camera. You open a camera using the <span class="tt">Open Direct Camera</span> blueprint object (which calls <a class="el" href="class_u_camera_capture_settings_library.html#a304b1e6fcbf4ea01cf15d65932975426">UCameraCaptureSettingsLibrary::OpenDirectCamera</a>). You can set the various inputs on the <span class="tt">Open Direct Camera</span> object to non-zero if you want to open a specific camera or at a specific resolution.</p>
 <div class="image">
 <img src="open_directcamera.png" alt=""/>
 <div class="caption">
 Opening a stream in the camera</div></div>
-    <h2 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
+    <h2 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
 Making a capture frame buffer</h2>
 <p>If you want to capture frames, you use the <span class="tt">Create Capture Frame Buffer</span> blueprint call (<a class="el" href="class_u_direct_camera_frame_buffer.html#aa64909641f5ac0959a5fad5cf2996885">UDirectCameraFrameBuffer::CreateCaptureFrameBuffer</a>). This creates a buffer to capture frames from the camera. The frame buffer has a format, which is a member of the DirectCameraFrameType enum, along with a width and height (leave these at zero if you just want the current resolution).</p>
 <div class="image">
 <img src="open_directcamera.png" alt=""/>
 <div class="caption">
 Create a capture frame buffer</div></div>
-    <h2 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
+    <h2 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
 Capturing a frame to your code</h2>
 <p>Once you have a frame buffer object, you can capture from the camera to it. To capture a frame to your code you then call <span class="tt">Start Capture</span> (<a class="el" href="class_u_direct_camera_frame_capture.html#a499f20f41e3ddff147c12e2a3c8f186e">UDirectCameraFrameCapture::StartCapture</a>) with the frame buffer, which then fires its <span class="tt">On Frame Buffer Ready</span> event when the buffer is filled.</p>
 <p>You can then access the frame data by using the methods on the <span class="tt">Direct Camera Frame Buffer</span> object (see <a class="el" href="class_u_direct_camera_frame_buffer.html">UDirectCameraFrameBuffer</a> for details.)</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
 Saving a frame to storage</h2>
 <p>Once you have a frame buffer, if it is in an image format (e.g. jpeg image, DNG raw image) you may want to save it to image storage on your device. You can do this using the <span class="tt">Save Image</span> blueprint method (<a class="el" href="class_u_direct_camera_frame_buffer.html#a804a3849327a4a275fa5348792c6b255">UDirectCameraFrameBuffer::SaveImage</a>). This lets you save the file either to a path that you give it, or to the media gallery on the device (in this case you just give it the name). If you save to gallery, you don't have to worry about Android permissions. If you save to a path, then you need to be sure you have access to the path that you are writing to, either by requesting permissions, or by using a path within your application's storage directory.</p>
 <p>Make sure you give the filename the correct extension (.jpg, .dng etc.) as bad things happen on Android if you don't.</p>

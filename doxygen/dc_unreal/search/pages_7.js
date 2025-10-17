@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['making_20a_20capture_20frame_20buffer_0',['Making a capture frame buffer',['../index.html#autotoc_md3',1,'']]]
+  ['in_20project_20settings_20check_20which_20permissions_20you_20want_0',['In project settings, check which permissions you want',['../index.html#autotoc_md1',1,'']]]
 ];

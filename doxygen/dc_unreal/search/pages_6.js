@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['in_20project_20settings_20check_20which_20permissions_20you_20want_0',['In project settings, check which permissions you want',['../index.html#autotoc_md0',1,'']]]
+  ['how_20to_20use_20direct_20camera_0',['How to use Direct Camera',['../index.html',1,'']]]
 ];

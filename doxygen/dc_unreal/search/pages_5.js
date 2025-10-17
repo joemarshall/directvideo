@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['how_20to_20use_20direct_20camera_0',['How to use Direct Camera',['../index.html',1,'']]]
+  ['getting_20the_20plugin_0',['Getting the plugin',['../index.html#autotoc_md0',1,'']]]
 ];
