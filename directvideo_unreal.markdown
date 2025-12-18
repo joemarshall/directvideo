@@ -49,31 +49,36 @@ There are some limitations however -
 
 ## Advanced Player Options
 
+### Fallback Videos
+If you want to support a range of devices, you can include lower resolution fallback videos for your main videos. By default these should be named like `[videoname]-fallback-1.mp4`, `[videoname]-fallback-2.mp4` etc. You can change the fallback video naming scheme in `Project settings -> Plugins -> DirectVideo`. When opening a video, DirectVideo Android will try and open the main video first, and if that fails, will try and open each fallback video in turn until one opens successfully.
+
 ### Demo APK log dump
 
 If you find the demo apks don't work on your device, follow the instructions at (https://github.com/joemarshall/DirectVideoExample/) to send me a logfile dump and I'll try and fix it.
 
 ### Logging
 
-If something doesn't work, and you want to look at logs (or send me some log output), there are two levels of logs available - Verbose and VeryVerbose. To enable these, add a section to DefaultEngine.ini (or add a value into Core.Log if you already set logging levels for anything else), like below.
+If something doesn't work, and you want to look at logs (or send me some log output), there are a whole load of logs available - you can enable this in `project settings -> Plugins -> DirectVideo`.
 
-```
-[Core.Log]
-LogDirectVideo=VeryVerbose
-```
+Then it will print tons of stuff (if you set the level to **VeryVerbose**) or a bit of stuff if you set it to **Verbose** to the Android LogCat. You can read a logcat file from command prompt / terminal like so:
 
-Then it will print tons of stuff (or a bit of stuff if you set it to **Verbose**) to the Android LogCat. You can read a logcat file from command prompt / terminal like so:
+1. Kill your app on the device, and clear the logs, so that you don't log a million lines of data about whatever has happened before, using the following command: 
 
-1. Clear the logs, so that you don't log a million lines of data about whatever has happened before: 
 `adb logcat -c `
 
-2. Now start your app. Once it is running, save the logcat output to a file:
+2. Now start logging to a file using this command:
+
 `adb logcat > output.txt`
-3. When your app has finished, output.txt should be full of lovely logs and you can press CTRL+C to stop writing logcat.
+
+2. Now start your app. 
+
+3. When your app has finished (or heaven forbid has crashed), output.txt should be full of lovely logs and you can press CTRL+C to stop writing logcat.
+
+4. Look at the logcat file and search for lines with DirectVideo in them. You can send me the log file if you want me to look at it.
 
 ### Colour format
 
-By default the player uses 10 bit colour (RGBA1010102) for the output frames, which gives higher quality colour reproduction than 8 bit (RGBA888). It is supported by modern Android GPUs. On some older devices, you may want to use RGBA888 colour format. You can do this by adding a DirectVideo section to DefaultEngine.ini with the colour format set, like so:
+By default the player uses 10 bit colour (RGBA1010102) for the output frames, which gives higher quality colour reproduction than 8 bit (RGBA888). It is supported by modern Android GPUs. On some older devices, you may want to use RGBA888 colour format. You can do this in `project settings -> Plugins -> DirectVideo`, or by adding the following section to DefaultEngine.ini:
 ```
 [DirectVideo]
 OutputFormat=CharRGBA
@@ -114,6 +119,10 @@ On Quest 3, I have quantified the main limit you hit, which is the total of the 
 Looking at the Android specs, I think there is in theory a limit on most devices of 16 videos decoding simulataneously in total, but I haven't tested that.
 
 Bear in mind that the limits are on how many videos you have *open* in a player, no matter whether you are actively rendering it. Because of this, if you're using loads of different players, be careful to make sure you don't have any open when you don't need them to be prepared  or playing.
+
+## How can I support different quality devices?
+
+All devices have resolution limits - for Meta Quest, and many other Snapdragon 8 devices, the limits are really high so you are unlikely to hit them. However if you are targeting lower end devices, you may find that some devices can't decode full resolution video. To handle this, you can use fallback video files. DirectVideo Android will automatically fallback to a smaller resolution if the main file can't be opened.
 
 ### Why is this plugin needed?
 
