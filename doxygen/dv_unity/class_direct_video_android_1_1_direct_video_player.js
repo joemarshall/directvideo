@@ -1,0 +1,56 @@
+var class_direct_video_android_1_1_direct_video_player =
+[
+    [ "LogFlags", "class_direct_video_android_1_1_direct_video_player.html#a432b9cfe51e8f3c796b7dc3695a25cb4", [
+      [ "Error", "class_direct_video_android_1_1_direct_video_player.html#a432b9cfe51e8f3c796b7dc3695a25cb4a902b0d55fddef6f8d651fe1035b7d4bd", null ],
+      [ "TextureImplementation", "class_direct_video_android_1_1_direct_video_player.html#a432b9cfe51e8f3c796b7dc3695a25cb4aba63fdd4e81fc1350c3f7cd0b93a99fd", null ],
+      [ "TextureImplementation_Verbose", "class_direct_video_android_1_1_direct_video_player.html#a432b9cfe51e8f3c796b7dc3695a25cb4ac60c9dca5f946623f53ce0ee8e09437f", null ],
+      [ "Decoding", "class_direct_video_android_1_1_direct_video_player.html#a432b9cfe51e8f3c796b7dc3695a25cb4ae4b3b5856c7f171b6891bb0dd3cadf0c", null ],
+      [ "Decoding_Verbose", "class_direct_video_android_1_1_direct_video_player.html#a432b9cfe51e8f3c796b7dc3695a25cb4a6898f6dcd07724a21cdb21a9a53ace60", null ],
+      [ "Vulkan", "class_direct_video_android_1_1_direct_video_player.html#a432b9cfe51e8f3c796b7dc3695a25cb4a38625270231b647116c80bcbc4f9d1d8", null ],
+      [ "Vulkan_Verbose", "class_direct_video_android_1_1_direct_video_player.html#a432b9cfe51e8f3c796b7dc3695a25cb4a8667dce6c32c03e29937e57a5c22f1cb", null ],
+      [ "Unity_Plugin", "class_direct_video_android_1_1_direct_video_player.html#a432b9cfe51e8f3c796b7dc3695a25cb4ad94229d67a5fcb7f1d69160bc30a922b", null ],
+      [ "Unity_Plugin_Verbose", "class_direct_video_android_1_1_direct_video_player.html#a432b9cfe51e8f3c796b7dc3695a25cb4a7d08e5638c5ecfb6c6f9d710ec0653ae", null ]
+    ] ],
+    [ "RenderMode", "class_direct_video_android_1_1_direct_video_player.html#a71a4275b69d21af7a1b07fa2c83fa0d7", [
+      [ "DirectVideo", "class_direct_video_android_1_1_direct_video_player.html#a71a4275b69d21af7a1b07fa2c83fa0d7aae8b1140a516192becb53bb74d35ae15", null ],
+      [ "UnityVideoPlayer", "class_direct_video_android_1_1_direct_video_player.html#a71a4275b69d21af7a1b07fa2c83fa0d7acc789ffefb08f2132eade3917220a763", null ],
+      [ "DebugTexture", "class_direct_video_android_1_1_direct_video_player.html#a71a4275b69d21af7a1b07fa2c83fa0d7a167005243bced0c1a8ced31772dc8698", null ],
+      [ "DoNothing", "class_direct_video_android_1_1_direct_video_player.html#a71a4275b69d21af7a1b07fa2c83fa0d7a71b7f3fcd4098ebf8a3b387579d90dd7", null ]
+    ] ],
+    [ "State", "class_direct_video_android_1_1_direct_video_player.html#a3e68abe2d996a3b941f7f4f0a15504d9", [
+      [ "Closed", "class_direct_video_android_1_1_direct_video_player.html#a3e68abe2d996a3b941f7f4f0a15504d9a03f4a47830f97377a35321051685071e", null ],
+      [ "RequestingPermissions", "class_direct_video_android_1_1_direct_video_player.html#a3e68abe2d996a3b941f7f4f0a15504d9ae1e53145a217687181fa6540d3826059", null ],
+      [ "PermissionDenied", "class_direct_video_android_1_1_direct_video_player.html#a3e68abe2d996a3b941f7f4f0a15504d9a4b33a686be73bb172407d73b26356275", null ],
+      [ "OpenFailed", "class_direct_video_android_1_1_direct_video_player.html#a3e68abe2d996a3b941f7f4f0a15504d9ac60b10c14b43d15f91424c6addfc31ac", null ],
+      [ "Paused", "class_direct_video_android_1_1_direct_video_player.html#a3e68abe2d996a3b941f7f4f0a15504d9ae99180abf47a8b3a856e0bcb2656990a", null ],
+      [ "Playing", "class_direct_video_android_1_1_direct_video_player.html#a3e68abe2d996a3b941f7f4f0a15504d9ac9dbb2b7c84159b632d71e512eba8428", null ],
+      [ "PlayingSuspended", "class_direct_video_android_1_1_direct_video_player.html#a3e68abe2d996a3b941f7f4f0a15504d9a9cddf1e804a0a6b98298831bfb37641d", null ]
+    ] ],
+    [ "Close", "class_direct_video_android_1_1_direct_video_player.html#a7b36175400b05e080b830e1040e5fa14", null ],
+    [ "GetCurrentRenderMode", "class_direct_video_android_1_1_direct_video_player.html#a1d08638c27493c46e10e17d30fbd0b65", null ],
+    [ "GetState", "class_direct_video_android_1_1_direct_video_player.html#a7a174e8a22829a6e1a31cf90989794f4", null ],
+    [ "Open", "class_direct_video_android_1_1_direct_video_player.html#a39eb243889c1bb937a3e83a8d255d564", null ],
+    [ "Play", "class_direct_video_android_1_1_direct_video_player.html#adc1a8781db280c66857932fc28c0c98c", null ],
+    [ "Prepare", "class_direct_video_android_1_1_direct_video_player.html#ab6f07cd895c4039bc42903a0df307458", null ],
+    [ "Stop", "class_direct_video_android_1_1_direct_video_player.html#af01250d475471d1be49c1230763edb5b", null ],
+    [ "TogglePlay", "class_direct_video_android_1_1_direct_video_player.html#a3f0621c90ead745f9f6aba569b85199e", null ],
+    [ "ToggleUnityPlayer", "class_direct_video_android_1_1_direct_video_player.html#a8b8606db1c90de54b0d1f99c98496a85", null ],
+    [ "audioSource", "class_direct_video_android_1_1_direct_video_player.html#a8ef0e22756c7af51bb42910f8f5a3cbf", null ],
+    [ "fallbackFilenamePattern", "class_direct_video_android_1_1_direct_video_player.html#abeee2ede595dd8700f7dafbaf3ba6b73", null ],
+    [ "internalLoggingFlags", "class_direct_video_android_1_1_direct_video_player.html#a92a358141249d806f0332b9464cf490c", null ],
+    [ "loop", "class_direct_video_android_1_1_direct_video_player.html#a8b03d1500386ce1e3139374a236d5140", null ],
+    [ "modeOnNonAndroidPlatforms", "class_direct_video_android_1_1_direct_video_player.html#abc7973f34fa3aa437fd4b4917b954a41", null ],
+    [ "playOnAwake", "class_direct_video_android_1_1_direct_video_player.html#a7fd3d66685f39f9e68c6113041d0a46d", null ],
+    [ "sourcePath", "class_direct_video_android_1_1_direct_video_player.html#ad274b281cf55dce72c25af9e1d2fd37c", null ],
+    [ "targetTexture", "class_direct_video_android_1_1_direct_video_player.html#a5f6895a9ab6f8a8e05e202d7ad888795", null ],
+    [ "actualPlayingURL", "class_direct_video_android_1_1_direct_video_player.html#a93db419e01ea2d9874b32bb5269f710b", null ],
+    [ "audioChannels", "class_direct_video_android_1_1_direct_video_player.html#a0820e10a42de55190bbf0e876072aaee", null ],
+    [ "audioRate", "class_direct_video_android_1_1_direct_video_player.html#ad04e1151f0a688282a735c37eeb4abe4", null ],
+    [ "height", "class_direct_video_android_1_1_direct_video_player.html#aa402424a0b35ac552bea3a5c1e44ae08", null ],
+    [ "isPlaying", "class_direct_video_android_1_1_direct_video_player.html#af5ae6dd4d5bc217d244a55e85fba37f1", null ],
+    [ "length", "class_direct_video_android_1_1_direct_video_player.html#aa44c3d2b31bbdf88b86df867a2b8f3fa", null ],
+    [ "seeking", "class_direct_video_android_1_1_direct_video_player.html#a964938656019337a2893e374c09f1d7f", null ],
+    [ "time", "class_direct_video_android_1_1_direct_video_player.html#ac77208ad1c467f7e526bae2b220ff6ad", null ],
+    [ "url", "class_direct_video_android_1_1_direct_video_player.html#a4be5b410452e4a1923653a0e134e4feb", null ],
+    [ "width", "class_direct_video_android_1_1_direct_video_player.html#ad68e1f143870c48e04b32268b728963e", null ]
+];

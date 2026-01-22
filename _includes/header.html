@@ -16,23 +16,35 @@
 
         <div class="trigger">
           {%- if page.url contains  'index' or page.url == "/" -%}
-          <a class="page-link-current" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+          <a class="home-link-current" style="border-radius:1em 1em 0 0" rel="author" href="{{ "/" | relative_url }}">Home</a>
           {%- else -%}
-          <a class="page-link" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a> 
+          <a class="home-link" style="border-radius:1em 1em 0 0" rel="author" href="{{ "/" | relative_url }}">Home</a> 
           {%- endif -%}
-          {%- for path in page_paths -%}
-            {%- assign my_page = site.pages | where: "path", path | first -%}
-            {%- if my_page.url contains  'index' or my_page.url == "/" -%}
-            {%- else -%}
-              {%- if my_page.title -%}
-                {% if my_page.url == page.url %}
-                  <a class="page-link-current" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
-                {%- else -%}
-                  <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
-                {%- endif -%}
+
+          {%- assign sorted_pages = site.pages | sort:"title" -%}
+          {%- assign last_page = null -%}
+          <div style="display:inline;">
+          {%- for link_page in sorted_pages -%}
+            {%- if link_page.engine!= null -%}
+             {%- if link_page.title != last_page -%}
+             </div><div style="margin:0 .1em 0 0;display:inline">
+             {%- if link_page.title == page.title -%}
+             <a class="plugin-title-current" href="{{ link_page.url | relative_url }}">
+              {%- else -%}
+             <a class="plugin-title" href="{{ link_page.url | relative_url }}">
               {%- endif -%}
-            {%- endif -%} 
+               {{ link_page.title | escape }}</a>
+             {%- endif -%}
+             {%- assign last_page = link_page.title -%}
+              {%- if link_page.url == page.url -%}
+                <a class="page-link-current" href="{{ link_page.url | relative_url }}">{{ link_page.engine | escape }}</a>
+              {%- else -%}
+              <a class="page-link" href="{{ link_page.url | relative_url }}">{{ link_page.engine | escape }}</a>
+              {%- endif -%}
+              {%- endif -%}
           {%- endfor -%}
+          </div>
+
         </div>
       </nav>
     {%- endif -%}

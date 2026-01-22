@@ -1,5 +1,5 @@
 ---
-title: DirectPlugins
+title: Home
 layout: page
 headerimg: images/directplugins_no_border.png
 ---

@@ -1,0 +1,9 @@
+var searchData=
+[
+  ['actualplayingurl_0',['actualPlayingURL',['../class_direct_video_android_1_1_direct_video_player.html#a93db419e01ea2d9874b32bb5269f710b',1,'DirectVideoAndroid::DirectVideoPlayer']]],
+  ['android_20for_20unity_20scripting_20documentation_1',['Direct Video Android for Unity Scripting Documentation',['../index.html',1,'']]],
+  ['architecture_5fid_2',['ARCHITECTURE_ID',['../arm64-v8a_2_c_make_files_23_831_82_2_compiler_id_c_2_c_make_c_compiler_id_8c.html#aba35d0d200deaeb06aee95ca297acb28',1,'ARCHITECTURE_ID:&#160;CMakeCCompilerId.c'],['../arm64-v8a_2_c_make_files_23_831_82_2_compiler_id_c_x_x_2_c_make_c_x_x_compiler_id_8cpp.html#aba35d0d200deaeb06aee95ca297acb28',1,'ARCHITECTURE_ID:&#160;CMakeCXXCompilerId.cpp'],['../_c_make_files_23_831_82_2_compiler_id_c_2_c_make_c_compiler_id_8c.html#aba35d0d200deaeb06aee95ca297acb28',1,'ARCHITECTURE_ID:&#160;CMakeCCompilerId.c'],['../_c_make_files_23_831_82_2_compiler_id_c_x_x_2_c_make_c_x_x_compiler_id_8cpp.html#aba35d0d200deaeb06aee95ca297acb28',1,'ARCHITECTURE_ID:&#160;CMakeCXXCompilerId.cpp'],['../x86__64_2_c_make_files_23_831_82_2_compiler_id_c_2_c_make_c_compiler_id_8c.html#aba35d0d200deaeb06aee95ca297acb28',1,'ARCHITECTURE_ID:&#160;CMakeCCompilerId.c'],['../x86__64_2_c_make_files_23_831_82_2_compiler_id_c_x_x_2_c_make_c_x_x_compiler_id_8cpp.html#aba35d0d200deaeb06aee95ca297acb28',1,'ARCHITECTURE_ID:&#160;CMakeCXXCompilerId.cpp']]],
+  ['audiochannels_3',['audioChannels',['../class_direct_video_android_1_1_direct_video_player.html#a0820e10a42de55190bbf0e876072aaee',1,'DirectVideoAndroid::DirectVideoPlayer']]],
+  ['audiorate_4',['audioRate',['../class_direct_video_android_1_1_direct_video_player.html#ad04e1151f0a688282a735c37eeb4abe4',1,'DirectVideoAndroid::DirectVideoPlayer']]],
+  ['audiosource_5',['audioSource',['../class_direct_video_android_1_1_direct_video_player.html#a8ef0e22756c7af51bb42910f8f5a3cbf',1,'DirectVideoAndroid::DirectVideoPlayer']]]
+];

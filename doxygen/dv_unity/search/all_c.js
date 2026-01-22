@@ -1,0 +1,12 @@
+var searchData=
+[
+  ['paused_0',['Paused',['../class_direct_video_android_1_1_direct_video_player.html#a3e68abe2d996a3b941f7f4f0a15504d9ae99180abf47a8b3a856e0bcb2656990a',1,'DirectVideoAndroid::DirectVideoPlayer']]],
+  ['permissiondenied_1',['PermissionDenied',['../class_direct_video_android_1_1_direct_video_player.html#a3e68abe2d996a3b941f7f4f0a15504d9a4b33a686be73bb172407d73b26356275',1,'DirectVideoAndroid::DirectVideoPlayer']]],
+  ['platform_5fid_2',['PLATFORM_ID',['../arm64-v8a_2_c_make_files_23_831_82_2_compiler_id_c_2_c_make_c_compiler_id_8c.html#adbc5372f40838899018fadbc89bd588b',1,'PLATFORM_ID:&#160;CMakeCCompilerId.c'],['../arm64-v8a_2_c_make_files_23_831_82_2_compiler_id_c_x_x_2_c_make_c_x_x_compiler_id_8cpp.html#adbc5372f40838899018fadbc89bd588b',1,'PLATFORM_ID:&#160;CMakeCXXCompilerId.cpp'],['../_c_make_files_23_831_82_2_compiler_id_c_2_c_make_c_compiler_id_8c.html#adbc5372f40838899018fadbc89bd588b',1,'PLATFORM_ID:&#160;CMakeCCompilerId.c'],['../_c_make_files_23_831_82_2_compiler_id_c_x_x_2_c_make_c_x_x_compiler_id_8cpp.html#adbc5372f40838899018fadbc89bd588b',1,'PLATFORM_ID:&#160;CMakeCXXCompilerId.cpp'],['../x86__64_2_c_make_files_23_831_82_2_compiler_id_c_2_c_make_c_compiler_id_8c.html#adbc5372f40838899018fadbc89bd588b',1,'PLATFORM_ID:&#160;CMakeCCompilerId.c'],['../x86__64_2_c_make_files_23_831_82_2_compiler_id_c_x_x_2_c_make_c_x_x_compiler_id_8cpp.html#adbc5372f40838899018fadbc89bd588b',1,'PLATFORM_ID:&#160;CMakeCXXCompilerId.cpp']]],
+  ['play_3',['Play',['../class_direct_video_android_1_1_direct_video_player.html#adc1a8781db280c66857932fc28c0c98c',1,'DirectVideoAndroid::DirectVideoPlayer']]],
+  ['playing_4',['Playing',['../class_direct_video_android_1_1_direct_video_player.html#a3e68abe2d996a3b941f7f4f0a15504d9ac9dbb2b7c84159b632d71e512eba8428',1,'DirectVideoAndroid::DirectVideoPlayer']]],
+  ['playingsuspended_5',['PlayingSuspended',['../class_direct_video_android_1_1_direct_video_player.html#a3e68abe2d996a3b941f7f4f0a15504d9a9cddf1e804a0a6b98298831bfb37641d',1,'DirectVideoAndroid::DirectVideoPlayer']]],
+  ['playonawake_6',['playOnAwake',['../class_direct_video_android_1_1_direct_video_player.html#a7fd3d66685f39f9e68c6113041d0a46d',1,'DirectVideoAndroid::DirectVideoPlayer']]],
+  ['plugin_7',['Using the Plugin',['../index.html#autotoc_md1',1,'']]],
+  ['prepare_8',['Prepare',['../class_direct_video_android_1_1_direct_video_player.html#ab6f07cd895c4039bc42903a0df307458',1,'DirectVideoAndroid::DirectVideoPlayer']]]
+];
