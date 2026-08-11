@@ -13,7 +13,7 @@ This is the Unity version of the plugin. For Unreal, see [DirectVideo Android fo
 DirectVideo Android enables high performance video playback within Unity on Android devices, including phones and VR Headsets such as Meta Quest 2 & 3. It works through direct use of the Vulkan graphics API, keeping all video handling in GPU, with frames being decompressed directly into Unity textures. This means you can play 4K and 8K videos, including 360 degree content without frame drops on mid-level phones and VR headsets.
 
 Coming soon on Unity Asset Store. If you need it sooner, contact me [by email](mailto:unity@joemarshall.org.uk).
-<!-- Get it from Unity asset store: [Direct Video Android](https://assetstore.unity.com/packages/tools/video/direct-video-android-2384) -->
+<!-- Get it from Unity asset store: [Direct Video Android](https://assetstore.unity.com/packages/slug/336678) -->
 
 
 # About Direct Video Android

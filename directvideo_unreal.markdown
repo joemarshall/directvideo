@@ -109,6 +109,16 @@ Streaming is not yet supported; the current version of the plugin supports playb
 ### What formats should I use?
 As is the same with the default Unreal media player, this relies on decoding support on the Android device. Typically on pretty much any recent device you are safe using H264 or H265 mp4 files, with one caveat; if you are developing for Meta Quest 3, there is a bug on the device which means it crashes decoding some 4k/8K H264 files; if you are targeting 4K or 8K, I recommend encoding as H265, which has both improved compression performance, and doesn't crash the Quest 3. Or you can use AV1 if you're happy only targeting recent devices like Quest 3 which support it. AV1 is really fast to encode with ffmpeg.
 
+If you want the best performance for decoding, for example if you want to be able to run 60fps videos at double speed or whatever, tuning the encoding of your videos can make a big difference on low spec devices. In particular, in ffmpeg, I use the following parameters:
+
+Parameter | Why
+-----------|------------
+ `-preset veryslow` | Slow encoding ; this improves quality per bit-rate.
+ `-tune fastdecode` | Optimize for fast decoding: 
+ `-profile:v main` | Use older compression profile (more compatible, faster decode) 
+  `-pix_fmt yuv420p` | Standard YUV pixel format. 
+
+
 ### How many videos can I play at once, and can I play loads of massive videos?
 
 If you check out my [multiple players demo](https://github.com/joemarshall/DirectVideoMultiples) for Quest 3, I run 8 players at a 2K resolution (3840x2176x24fps), without frame drops or slowing down the Quest display frame rate. The main things limiting what you can play is limits on hardware decoders on your device. If you try and decode more, it will either fail, or fallback to very slow software video decoding, which both kills frame rate and on my phone at least has very poor colour rendering quality for some reason.
