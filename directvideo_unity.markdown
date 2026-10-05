@@ -10,10 +10,13 @@ This is the Unity version of the plugin. For Unreal, see [DirectVideo Android fo
 
 ## What is it?
 
-DirectVideo Android enables high performance video playback within Unity on Android devices, including phones and VR Headsets such as Meta Quest 2 & 3. It works through direct use of the Vulkan graphics API, keeping all video handling in GPU, with frames being decompressed directly into Unity textures. This means you can play 4K and 8K videos, including 360 degree content without frame drops on mid-level phones and VR headsets.
+DirectVideo Android enables high performance video playback within Unity on Android devices, including phones and VR Headsets such as Meta Quest 2 & 3. It works through direct use of the Vulkan graphics API, keeping all video handling in GPU, with frames being decompressed directly into Unity textures. This means you can play 4K and 8K videos, including 360 degree content, without frame drops on mid-level phones and VR headsets.
 
-Coming soon on Unity Asset Store. If you need it sooner, contact me [by email](mailto:unity@joemarshall.org.uk).
-<!-- Get it from Unity asset store: [Direct Video Android](https://assetstore.unity.com/packages/slug/336678) -->
+Get it from Unity asset store: [Direct Video Android](https://assetstore.unity.com/packages/tools/video/direct-video-for-android-336678)
+
+Demo version (watermarked): 
+There's a try-before-you buy demo version on my github at:
+https://github.com/joemarshall/directvideo/releases/download/1.0/DirectVideo-Demo.unitypackage . The demo version has an obnoxious watermark.
 
 
 # About Direct Video Android
@@ -53,7 +56,7 @@ In the `advanced` section there are various things that you are unlikely to need
 
 **Mode on non-Android platforms** - what to do if the component is used on a non-Android platform. Options are to do nothing, or to use Unity's built in VideoPlayer component instead.
 
-**Internal logging** - enable this to get more detailed logging from the plugin, useful for debugging issues / support.
+**Internal logging** - enable this to get more detailed logging from the plugin, useful for debugging issues / support. You can see this logging in Android Logcat.
 
 **Fallback Filename Pattern** - This pattern is used to find lower-resolution or lower-framerate versions of the video to use on less powerful devices. The pattern defaults to `{NAME}-fallback-{N}.{EXT}` and should include three placeholders:
 
@@ -71,12 +74,12 @@ To use DirectVideo from C# scripts, look at the [API documentation](doxygen/dv_u
 # Technical details
 ## Requirements
 
-The plugin should work with any recent (Android api level>27 or greater) Android device using the Vulkan API. 
+The plugin should work with any recent (Android api level>29 or greater) Android device using the Vulkan API. 
 
 This version of Direct Video Android is compatible with the following versions of the Unity Editor:
 
 * 6.0 and later (recommended)
-
+* 2022 LTS 
 
 ## Package contents
 >>>
@@ -96,4 +99,5 @@ The following table indicates the &lt;describe the breakdown you used here&gt;:
  
 |Date|Reason|
 |---|---|
+|Oct 05, 2026|Demo version added, v5 release.
 |Jan 21, 2026|Unedited. Published to package.|
