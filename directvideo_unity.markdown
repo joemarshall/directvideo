@@ -16,7 +16,7 @@ Get it from Unity asset store: [Direct Video Android](https://assetstore.unity.c
 
 Demo version (watermarked): 
 There's a try-before-you buy demo version on my github at:
-https://github.com/joemarshall/directvideo/releases/download/1.0/DirectVideo-Demo.unitypackage . The demo version has an obnoxious watermark.
+[https://github.com/joemarshall/directvideo/releases/download/1.0/DirectVideo-Demo.unitypackage](https://github.com/joemarshall/directvideo/releases/download/1.0/DirectVideo-Demo.unitypackage). The demo version has an obnoxious watermark.
 
 
 # About Direct Video Android
